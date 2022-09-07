@@ -137,19 +137,19 @@ namespace ReorderValidation
         }
         private void CloseOverlayingDialog()
         {
-            /*  if (GetElementCount(OverlayingDialog) > 0)
-                  //  if (OverlayDialog.Displayed)
-                    {*/
-            Delay();
-            Delay();
-            SwitchToFrame(driver);
-           
+            if (GetElementCount(OverlayingDialog) > 0)
+            //  if (OverlayDialog.Displayed)
+            {
+                Delay();
+                Delay();
+                SwitchToFrame(driver);
+
                 WaitTillElementIsVisible(getOverlayDialogPop());
-                
+
                 WaitTillElementIsClickable(GetCloseButton());
                 GetCloseButton().Click();
                 SwitchToDefaultScreen();
-         //   }
+            }
         }
 
         public WorkOrderPage ClickOnWorkOrderPage()

@@ -171,7 +171,7 @@ namespace ReorderValidation
         private static string[] GetHeaders()
         {
             //var header = File.ReadLines(@"C:\Users\smestry\OneDrive - XPO Logistics\Desktop\VS\Success-06222022-INDIANA_20220605.csv").ToList();
-            var header = File.ReadLines(GetFilePath("Boston")).ToList();
+            var header = File.ReadLines(GetFilePath("Indiana")).ToList();
             var singleHeader = header[0].Trim('\"').Trim();
             var spaceRemovedHeader = singleHeader.Replace(" ", "");
             string[] stringSeparators = new string[] { "\",\"", "," };
